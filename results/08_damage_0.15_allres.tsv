@@ -1,0 +1,2 @@
+method	Ne	init	s_true	nrep	npos	npos_den	ntrue	propPos	propPos_den	propTrue	rmse
+approxwf	10000	0.1	0.02	1000	355	567	868	0.355	0.567	0.868	0.0106258078331099

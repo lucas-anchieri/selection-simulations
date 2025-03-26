@@ -1,0 +1,7 @@
+task estimate
+MCMCLength 1200000
+sampling 100
+h 0.5
+nStates 51
+noModelChoice
+verbose

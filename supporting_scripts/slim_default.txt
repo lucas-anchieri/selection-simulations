@@ -1,0 +1,58 @@
+initialize() {
+  initializeMutationRate(0);
+
+  // initialize mutation with selection coefficient S_COEFF and h=0.5
+  initializeMutationType("m1", 0.5, "f", S_COEFF);
+
+  // g1 genomic element type: uses m1 for all mutations
+  initializeGenomicElementType("g1", m1, 1.0);
+
+  // uniform chromosome of length 1 bp with uniform recombination (useless in our case)
+  initializeGenomicElement(g1, 0, 0);
+  initializeRecombinationRate(0.5);
+}
+
+1 {
+  // create the population with the desired population size
+  sim.addSubpop("p1", POP_SIZE);
+}
+
+1 late() {
+  // add the mutation in the population with the desired initial allele count
+  sample(p1.genomes, INIT).addNewDrawnMutation(m1, 0);
+  defineGlobal("allele_count", INIT);
+}
+
+// at each generation
+1:N_GEN late() {
+  // store the current allele count
+  allele_count_prev = allele_count;
+
+  // if the mutation is not in the population anymore, it has either fixed or been lost
+  if ((sum(sim.mutationCounts(p1)) == 0)) {
+
+    // we can end the simulation here
+    sim.simulationFinished();
+
+    // if the previous frequency was above 90%, then the allele has been fixed
+    if ((allele_count_prev >= 0.9*POP_SIZE*2)) {
+      for (remaining_gen in sim.generation:N_GEN)
+        // output the total pop size as the allele count for all following generations
+        catn(POP_SIZE*2);
+      }
+
+    // if the previous frequency was below 10%, then the allele has been lost
+    if ((allele_count_prev <= 0.1*POP_SIZE*2)) {
+      // output an allele count of 0 for all following generations
+      for (remaining_gen in sim.generation:N_GEN)
+        catn(0);
+    }
+  }
+
+  // if the allele is still present in the population (not fixed nor lost)
+  else {
+    // draw and output the new allele count from the previous generation
+    defineGlobal("allele_count", sum(sim.mutationCounts(p1)));
+    catn(allele_count);
+  }
+}
