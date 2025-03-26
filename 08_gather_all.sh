@@ -13,6 +13,12 @@
 #SBATCH --mem 4G
 #SBATCH --time 00:30:00
 
+# This script gathers all the result files generated at the last step into two files for
+# a given scenario. One, ending with `all_repres.tsv`, contains independent results for
+# each of the 1,000 replicates for every combination of parameters. The other, ending with
+# `all_res.tsv`, contains summary statistics computed from the replicates for every
+# combination of parameters.
+
 # set label of current sample
 sample_label="01_Ia_ideal_100g"
 

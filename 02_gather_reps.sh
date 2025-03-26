@@ -19,7 +19,7 @@
 
 # since we make simulations for all combinations of 12 selection coefficients and 18
 # initial allele frequencies, we have 12x18=216 different scenarios, hence the array
-# of 2016 jobs
+# of 216 jobs
 
 # set up modules and directories
 module add gcc r
