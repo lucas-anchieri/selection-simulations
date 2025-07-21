@@ -425,7 +425,7 @@ tpr <- ggplot(data = res,
   scale_shape_manual(values = c(22, 21, 24),
                      name = "Method") +
   xlab("Dataset") +
-  ylab("True Positive Rate") +
+  ylab("Power") +
   ggtitle("B") +
   theme(panel.background = element_rect(fill = "white"),
         panel.grid.major = element_line(color = "grey90"),
@@ -444,7 +444,6 @@ tpr <- ggplot(data = res,
         legend.position = "bottom",
         legend.key = element_rect(fill = "white", color=NA),
         axis.title = element_text(size = 10),
-        axis.title.y = element_text(hjust = 0),
         axis.text.x = element_text(angle = 45, hjust=1, vjust=1),
         axis.line = element_line(color="black", linewidth = 0.25)
   )

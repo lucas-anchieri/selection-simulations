@@ -410,7 +410,7 @@ tpr <- ggplot(data = res_tpr[order(res_tpr$method), ],
   scale_shape_manual(values = c(22, 21, 24),
                      name = "Method") +
   xlab("True s") +
-  ylab("True Positive Rate") +
+  ylab("Power") +
   ggtitle("D") +
   theme(panel.background = element_rect(fill = "white"),
         panel.grid.major = element_line(color = "grey90"),
