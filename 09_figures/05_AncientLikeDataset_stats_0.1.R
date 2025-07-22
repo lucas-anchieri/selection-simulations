@@ -160,7 +160,7 @@ rmse <- ggplot(data = res[order(res$method), ],
 
 rmse
 
-ggsave(rmse, file = paste0(cwd, "../plots/panels/Figure_06/06-IV-0.1_a_rmse.pdf"),
+ggsave(rmse, file = paste0(cwd, "../plots/panels/Figure_05/05-IV-0.1_a_rmse.pdf"),
        width = 2.5, height = 2, scale = 1.5)
 
 #------------------------#
@@ -214,7 +214,7 @@ bias <- ggplot(data = repres_stats[order(repres_stats$method), ],
 
 bias
 
-ggsave(bias, file = paste0(cwd, "../plots/panels/Figure_06/06-IV-0.1_b_bias.pdf"),
+ggsave(bias, file = paste0(cwd, "../plots/panels/Figure_05/05-IV-0.1_b_bias.pdf"),
        width = 2.5, height = 2, scale = 1.5)
 
 #----------------------------#
@@ -269,7 +269,7 @@ variance <- ggplot(data = repres_stats[order(repres_stats$method), ],
 
 variance
 
-ggsave(variance, file = paste0(cwd, "../plots/panels/Figure_06/06-IV-0.1_c_variance.pdf"),
+ggsave(variance, file = paste0(cwd, "../plots/panels/Figure_05/05-IV-0.1_c_variance.pdf"),
        width = 2.5, height = 2, scale = 1.5)
 
 #-------------------------#
@@ -333,7 +333,7 @@ tpr <- ggplot(data = res_noBMWS_tpr[order(res_noBMWS_tpr$method), ],
 
 tpr
 
-ggsave(tpr, file = paste0(cwd, "../plots/panels/Figure_06/06-IV-0.1_d_tpr.pdf"),
+ggsave(tpr, file = paste0(cwd, "../plots/panels/Figure_05/05-IV-0.1_d_tpr.pdf"),
        width = 2.5, height = 2, scale = 1.5)
 
 #--------------------------#
@@ -379,7 +379,7 @@ fpr <- ggplot(data = res_noBMWS_fpr[order(res_noBMWS_fpr$method), ],
 
 fpr
 
-ggsave(fpr, file = paste0(cwd, "../plots/panels/Figure_06/06-IV-0.1_e_fpr.pdf"), width = 2,
+ggsave(fpr, file = paste0(cwd, "../plots/panels/Figure_05/05-IV-0.1_e_fpr.pdf"), width = 2,
        height = 3, scale = 1.5)
 
 #-----------------------------#
@@ -408,5 +408,5 @@ fig_IV_2 <- ((rmse / bias / variance + plot_layout(heights = c(1, 1, 1))) |
 
 fig_IV_2
 
-ggsave(fig_IV_2, file = paste0(cwd, "../plots/Figure_06_ancient-dataset_0.1_stats.pdf"),
+ggsave(fig_IV_2, file = paste0(cwd, "../plots/Figure_05_ancient-dataset_0.1_stats.pdf"),
        width = 6, height = 6, scale = 1.2)
