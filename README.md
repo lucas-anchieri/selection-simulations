@@ -1,4 +1,4 @@
-This code can be used to replicate the analyses in Assessing Ancient DNA Sampling Strategies for Natural Selection Inference in Humans using Allele Frequency Time-Series Data. A preprint of this paper can be found ~here~ (coming soon).
+This code can be used to replicate the analyses in Assessing Ancient DNA Sampling Strategies for Natural Selection Inference in Humans Using Allele Frequency Time Series Data. You can read the article [here](https://doi.org/10.1093/gbe/evaf234).
 
 A few disclaimers first. I tried to clean up and comment these scripts as well as I can. There might be a few discrepancies in the file paths that I couldn't catch, but otherwise they should be sufficient to replicate the analyses without too much dificulty. These scripts kind of evolved organically (i.e., messily) over the years, and I had to find some tricks to deal with the limitations of the queuing system of our HPC, so there probably are ways to code some of these scripts that are more optimized and more elegant. Still, I consider that they are worth sharing. Finally, we use four methods to estimate selection in our framework: *ApproxWF*, *BMWS*, *Slattice*, and *Sr*. In order to run the estimations, one should first install said methods and add them to their `$PATH`.
 
@@ -8,7 +8,9 @@ I will now go over the different scripts and how they are used.
 
 # Perform the actual simulations
 
-The first 3 scripts are used to simulate allele trajectories taking into account different parameters: Population size, selection coefficient, initial allele frequency, total number of generations.
+The first 3 scripts are used to simulate allele trajectories using SLiM taking into account different parameters: Population size, selection coefficient, initial allele frequency, total number of generations.
+
+**IMPORTANT UPDATE:** These script have been written for version 3 of SLiM. I have been made aware that with newer versions (SLiM 4 and above), the scripts dont work and have to be slightly adapted. I do not plan to do it myself.
 
 ## 01_simulate.sh
 
