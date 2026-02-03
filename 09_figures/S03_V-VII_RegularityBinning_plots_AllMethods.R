@@ -312,7 +312,7 @@ point_estimates <- point_estimates_ApproxWF / point_estimates_BMWS /
 point_estimates
 
 ggsave(point_estimates,
-       file = paste0(cwd, "../plots/panels/Supplementary_Figure_S01/S01-V-VII_allMethods_a_point_estimates.png"),
+       file = paste0(cwd, "../plots/panels/Supplementary_Figure_S03/S03-V-VII_allMethods_a_point_estimates.png"),
        width = 3, height = 9, dpi = 600, scale = 1.2) # w = 5.25
 
 #------------------------#
@@ -365,7 +365,7 @@ rmse <- ggplot(data = res,
 
 rmse
 
-ggsave(rmse, file = paste0(cwd, "../plots/panels/Supplementary_Figure_S01/S01-V-VII_allMethods_b_rmse.pdf"),
+ggsave(rmse, file = paste0(cwd, "../plots/panels/Supplementary_Figure_S03/S03-V-VII_allMethods_b_rmse.pdf"),
        width = 2.5, height = 2.5, scale = 1.5)
 
 #------------------------#
@@ -418,7 +418,7 @@ bias <- ggplot(data = repres_stats,
 
 bias
 
-ggsave(bias, file = paste0(cwd, "../plots/panels/Supplementary_Figure_S01/S01-V-VII_allMethods_c_bias.pdf"),
+ggsave(bias, file = paste0(cwd, "../plots/panels/Supplementary_Figure_S03/S03-V-VII_allMethods_c_bias.pdf"),
        width = 2.5, height = 2.5, scale = 1.5)
 
 #----------------------------#
@@ -471,7 +471,7 @@ variance <- ggplot(data = repres_stats,
 
 variance
 
-ggsave(variance, file = paste0(cwd, "../plots/panels/Supplementary_Figure_S01/S01-V-VII_allMethods_d_variance.pdf"),
+ggsave(variance, file = paste0(cwd, "../plots/panels/Supplementary_Figure_S03/S03-V-VII_allMethods_d_variance.pdf"),
        width = 2.5, height = 2.5, scale = 1.5)
 
 #-------------------------#
@@ -530,7 +530,7 @@ tpr <- ggplot(data = res_noBMWS,
 
 tpr
 
-ggsave(tpr, file = paste0(cwd, "../plots/panels/Supplementary_Figure_S01/S01-V-VII_allMethods_e_tpr.pdf"),
+ggsave(tpr, file = paste0(cwd, "../plots/panels/Supplementary_Figure_S03/S03-V-VII_allMethods_e_tpr.pdf"),
        width = 2.5, height = 2.5, scale = 1.5)
 
 #------------------------#
@@ -562,5 +562,5 @@ fig_V.VII_1 <- ((point_estimates) |
 
 fig_V.VII_1
 
-ggsave(fig_V.VII_1, file = paste0(cwd, "../plots/Supplementary_Figure_S01_regularity_AllMethods.pdf"),
+ggsave(fig_V.VII_1, file = paste0(cwd, "../plots/Supplementary_Figure_S03_regularity_AllMethods.pdf"),
        width = 6, height = 9, scale = 1.2)

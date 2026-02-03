@@ -179,7 +179,7 @@ lbls
 # plot
 AncientDataset_tmp <- ggplot(data = samples_cumul,
                              aes(x=gen, y=count, fill = label, shape = label)) +
-  geom_line(aes(col = label), size=0.5, alpha=1, linetype = "solid") +
+  geom_line(aes(col = label), linewidth=0.5, alpha=1, linetype = "solid") +
   geom_point(size=4, stroke=0.25, alpha=1, col = "white", fill = "white") +
   geom_point(size=3, stroke=0.25, alpha=1, col = "black") +
   scale_x_continuous(minor_breaks = mbrks,
